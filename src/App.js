@@ -1,4 +1,3 @@
-// App.js
 import React from 'react';
 import CountUp from 'react-countup';
 import projectImg from './img/project.png';
@@ -16,16 +15,20 @@ const App = () => {
   ];
 
   return (
-    <div className="App">
-      <h1>Animating Number Counters React Js</h1>
-      <div className="count-up-cards">
+    <div className="container d-flex flex-column justify-content-center  min-vh-100">
+      <h1 className="text-center mb-4">Animating Number Counters React Js</h1>
+      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 ">
         {cardData.map(card => (
-          <div key={card.id} className="card">
-            <img src={card.img} alt={card.title} className="card-img" />
-            <h3>{card.title}</h3>
-            <span style={{ fontSize: '3rem' }}>
-  <CountUp start={card.start} end={card.end} duration={card.duration} />
-</span>
+          <div key={card.id} className="col pb-5">
+            <div className="card text-center p-5">
+              <img src={card.img} alt={card.title} className="card-img-top" />
+              <div className="card-body">
+                <h5 className="card-title">{card.title}</h5>
+                <span className="count-up">
+                  <CountUp start={card.start} end={card.end} duration={card.duration} />
+                </span>
+              </div>
+            </div>
           </div>
         ))}
       </div>

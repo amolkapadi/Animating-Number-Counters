@@ -1,73 +1,32 @@
-.App {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: aliceblue;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color:whitesmoke;
+}
+
+.card-img-top {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+
+.count-up {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .count-up {
+    font-size: 2rem;
   }
-  
-  h1 {
-    margin-bottom: 20px;
-    font-size: 2em;
-    color: #333;
-    text-align: center;
+}
+
+@media (max-width: 480px) {
+  .count-up {
+    font-size: 1.5rem;
   }
-  
-  .count-up-cards {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    width: 100%;
-  }
-  
-  .card {
-    width: 250px;
-    height: 250px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    padding: 10px;
-  }
-  
-  
-  .card h3 {
-    margin: 10px 0; 
-    font-size: 18px;
-    color: #333;
-  }
-  
-  .card-img {
-    width: 50px; 
-    height: 50px; 
-    margin-bottom: 10px; 
-  }
-  
-  @media (max-width: 768px) {
-    .count-up-cards {
-      flex-direction: column;
-      gap: 15px;
-    }
-  
-    .card {
-      width: 80%; 
-      height: auto; 
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .card {
-      width: 90%; 
-    }
-  }
-  
+}
